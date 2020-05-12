@@ -1,7 +1,7 @@
 // Arrays: Collection of objects (numbers, strings, booleans, JS Objects, Maps, Sets...).
 // The collection of objects in an array are referred to as elements
 
-let arr = [1,2, true, {a: 1, b: 3}, "String"];
+let arr = [1, 2, true, {a: 1, b: 3}, "String"];
 
 const loop_4 = [
   "Claire Akinyi",
@@ -22,3 +22,9 @@ const loop_4a = [
 
 let l1 = arr.length; // Bind length of arr to l1
 console.log(l1); // Log out l1
+
+let element = arr[3]; // Access array elements
+console.log(element); 
+
+
+
