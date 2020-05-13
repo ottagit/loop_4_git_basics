@@ -1,30 +1,54 @@
-// Arrays: Collection of objects (numbers, strings, booleans, JS Objects, Maps, Sets...).
-// The collection of objects in an array are referred to as elements
+const my_collection = [4, 7, 0, 6];
 
-let arr = [1, 2, true, {a: 1, b: 3}, "String"];
+// Array map method
+// array.map(callBack function)
+// Increment each array index by 2
+let new_array = my_collection.map((e, i) => i + 2);
+console.log(new_array);
 
-const loop_4 = [
-  "Claire Akinyi",
-  "John Oduor",
-  "Boniface Mwangi",
-  "Mike Opondo",
-];
+// Function definitions in JavaScript
 
-const loop_4a = [
-  {
-    codename: "Loop 4.0",
-    intake: "April/May",
-    year: 2020,
-    // Demo pending
-    student_name: loop_4
-  }
-]
+// Function Declaration
+let array_demo = [];
 
-let l1 = arr.length; // Bind length of arr to l1
-console.log(l1); // Log out l1
+console.log("Original array", array_demo);
 
-let element = arr[3]; // Access array elements
-console.log(element); 
+console.log(addTwo(4, 9, 7));
 
+function addTwo(a,b,c) {
+  array_demo.push(a,b,c);
+  console.log("New look array following push operations", array_demo);
 
+  let addByTwo = array_demo.map((e, i) => e + 2);
+  return addByTwo;
+}
+/* ReferenceError thrown
+console.log("Trial logging function scope binding outside the function", addByTwo);
+*/
+ 
 
+// Function Expression
+array_demo = [];
+
+const ongezaMbili = function(a, b, c) {
+  array_demo.push(a,b,c);
+  console.log("New look array following push operations", array_demo);
+
+  let addByTwo = array_demo.map((e, i) => e + 2);
+  return addByTwo;
+};
+ 
+console.log(ongezaMbili(3, 8, 1));
+
+// Arrow Function
+let array_demo = [];
+
+const zaidiYaMbili = (a, b, c) => {
+  array_demo.push(a,b,c);
+  console.log("New look array following push operations", array_demo);
+
+  let addByTwo = array_demo.map((e, i) => e + 2);
+  return addByTwo;
+};
+
+console.log(zaidiYaMbili(3, 8, 1)); 
